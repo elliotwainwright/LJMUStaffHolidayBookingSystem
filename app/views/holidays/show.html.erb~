@@ -1,0 +1,41 @@
+<% title "Holiday Booking Details" %>
+<% if current_user.id == @holiday.user_id or current_user.id == 14 %>
+
+<table>
+<tr>
+<td class="emphasis">Date From:</td>
+<td><%=h @holiday.date_from %></td>
+</tr>
+<tr>
+<td class="emphasis">Number Of Days:</td>
+<td><%=h @holiday.number_of_days %></td>
+</tr>
+<tr>
+<td class="emphasis">Date To:</td>
+<td><%=h @holiday.date_to %></td>
+</tr>
+<tr>
+<td class="emphasis">User:</td>
+<td><%=h @holiday.user_id %></td>
+</tr>
+<tr>
+<td class="emphasis">Approved?</td>
+<td><%=h @holiday.approved %></td>
+</tr>
+</table>
+
+<p>
+  <%= link_to "Edit", edit_holiday_path(@holiday) %> |
+  <%= link_to "Destroy", @holiday, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", holidays_path %>
+</p>
+
+    <% else %>
+    <p>You do not have access to this record</p>
+    <p>
+    <hr>
+    </p>
+    <%= link_to "ClicK Here to Go Back to List of All Holiday Requests", holidays_path %>
+    <br>
+    <br>
+    <% end %>

@@ -1,0 +1,29 @@
+<% title "LJMU Staff Holiday Booking System" %>
+<p><%= link_to "New Holiday", new_holiday_path %></p>
+<br>
+<hr>
+<br>
+<table id="hols">
+  <tr>
+    <th>Date From</th>
+    <th>Number Of Days</th>
+    <th>Date To</th>
+    <th>User</th>
+    <th>Approved</th>
+  </tr>
+  <% for holiday in @holidays %>
+    <tr>
+      <td><%=h holiday.date_from %></td>
+      <td><%=h holiday.number_of_days %></td>
+      <td><%=h holiday.date_to %></td>
+      <td><%=h holiday.user.username %></td>
+      <td><%=h holiday.approved %></td>
+      <td><%= link_to "Show", holiday %></td>
+      <td><%= link_to "Edit", edit_holiday_path(holiday) %></td>
+      <td><%= link_to "Destroy", holiday, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+<br>
+<hr>
+<p><%= link_to "New Holiday", new_holiday_path %></p>
