@@ -1,14 +1,10 @@
 <% title "Holiday Booking Details" %>
-  <% if current_user.admin? %>
+<% if current_user.id == @holiday.user_id or current_user.ad == 41 %>
 
 <table>
 <tr>
 <td class="emphasis">User:</td>
 <td><%=h @holiday.user.username %></td>
-</tr>
-</tr>
-<td class="emphasis">Number Of Days:</td>
-<td><%=h @holiday.number_of_days %></td>
 </tr>
 <tr>
 <td class="emphasis">Date From:</td>
