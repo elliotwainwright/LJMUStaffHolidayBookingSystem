@@ -1,7 +1,6 @@
 require 'faker'
 require 'populator'
 
-
 User.destroy_all
 Holiday.destroy_all
 
@@ -22,3 +21,10 @@ User.all.each do |user|
   holiday.date_to = Date.tomorrow
  end
 end
+
+user = User.new
+user.username = "admin"
+user.email = "admin@ljmu.ac.uk"
+user.password = "admin"
+user.password_confirmation = "admin"
+user.save

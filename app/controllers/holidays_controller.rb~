@@ -1,6 +1,15 @@
 class HolidaysController < ApplicationController
   def index
-    if current_user.id == 41
+    @holiday = Holiday.all
+    respond_to do |format|
+    format.html # Send the page using HTML
+    format.xml { render :xml => @holidays } # Send the page using XML
+    format.atom
+    end
+  end
+  
+  def index
+    if current_user.admin == true
       @holidays = Holiday.all
     else
       @holidays = Holiday.find_all_by_user_id(current_user.id)

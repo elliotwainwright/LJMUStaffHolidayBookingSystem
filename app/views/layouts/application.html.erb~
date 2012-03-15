@@ -6,8 +6,13 @@
     <%= stylesheet_link_tag 'application' %>
     <%= stylesheet_link_tag 'calendar/grey/style' %>
     <%= yield(:head) %>
+    
+    <%= auto_discovery_link_tag :atom, formatted_holidays_path (:atom) %>
+
+
   </head>
   <body>
+  <link href="/holidays.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
       <img class="ljmulogo" src="/images/ljmulogowhite.jpg" />
       <img class="ljmucloud" src="/images/ljmucloud.png" />
       <img class="ljmucompass" src="/images/ljmucompass.png" />
@@ -29,13 +34,9 @@
       <%= yield %>
 		</div>
 
-    <div id="holidaypic">
-		  <img src="/images/photo.jpg" />
-    </div>
-
 		<div class="footer">
 
-		  <div class="credits"><a title="My 'Work-in-progress' personal site" href="http://www.elliotwainwright.com/wip">Site Design by Elliot Wainwright</a></div>
+		  <div class="credits"><a title="My personal site" href="http://www.elliotwainwright.com">Site Design by Elliot Wainwright</a></div>
 
 		</div>
   </body>

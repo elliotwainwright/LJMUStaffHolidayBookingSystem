@@ -28750,3 +28750,1088 @@ Completed in 36ms (View: 25, DB: 1) | 200 OK [http://localhost/holidays]
   [4;35;1mHoliday Last ID (0.7ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
   [4;36;1mHoliday Populate (101.2ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (69, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (70, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (71, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (72, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (73, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (74, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (75, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (76, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (77, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL)[0m
   [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (148.5ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (59.2ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateHolidays (20120119200200)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "holidays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_from" date, "number_of_days" float, "date_to" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120119200200')[0m
+Migrating to CreateUsers (20120119200904)
+  [4;35;1mSQL (37.5ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120119200904')[0m
+Migrating to AddUserIdToHolidays (20120119204314)
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "holidays" ADD "user_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120119204314')[0m
+Migrating to AddApprovedToHolidays (20120123183446)
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "holidays" ADD "approved" boolean[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120123183446')[0m
+Migrating to AddAdminToUser (20120315140038)
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "users" ADD "admin" boolean[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120315140038')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("holidays")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'rose_weimann') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jamison_schmeler@rolfson.biz') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:53', '2012-03-15 18:01:53', 'rose_weimann', NULL, '1d29e1ab511cfb0ef6505de6011317fed2b35994', '57127e4dcd86d913e5cf40898792926ef37622e2', 'jamison_schmeler@rolfson.biz')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'nathanael.schuppe') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'ebony_crist@homenickkessler.net') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:53', '2012-03-15 18:01:53', 'nathanael.schuppe', NULL, '1df083a9757ff43b2f8f6ea2b45c5f4b9a529e8c', 'd5b526b5bf7e3aac1b5527d9bda1c4a8e2b01a9b', 'ebony_crist@homenickkessler.net')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'quincy_rath') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'freddie@bergnaum.name') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:53', '2012-03-15 18:01:53', 'quincy_rath', NULL, 'e360a934b4641162bdb147a75e3316ebc2031c46', '644522e22137fae452dbecc09e13ac7c5cd2e3ea', 'freddie@bergnaum.name')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'wilton') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'brant@welch.name') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:53', '2012-03-15 18:01:53', 'wilton', NULL, '40bd567d11d6a05fff8dc211030834191f0f2def', 'f341cdc44eb9f344256dbc34890f49a0c38882db', 'brant@welch.name')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'ona') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'keon@gislasonstiedemann.net') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:54', '2012-03-15 18:01:54', 'ona', NULL, '375c45053ac21d58ce72da7434bd2a7e992044de', '6a0c37fb5650f16accce9b4f373a32bb4de09c0b', 'keon@gislasonstiedemann.net')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'freeda.hyatt') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'kaylie.keeling@donnelly.net') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:54', '2012-03-15 18:01:54', 'freeda.hyatt', NULL, 'fdf22c5e95979b7ad8baa96537d365b3150eef72', '961de0a4c986f1d891c550309bd00ffb6a4d39ad', 'kaylie.keeling@donnelly.net')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'brycen_schneider') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'ottis.kreiger@veum.com') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:54', '2012-03-15 18:01:54', 'brycen_schneider', NULL, '2c8a5633b46f41e2fafc4387ff2ec7df54dd03e9', 'b73ea8973f61c7506c14efc7d0a48c8f72b042b9', 'ottis.kreiger@veum.com')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'delphine') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'cornell@kuphallittle.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:54', '2012-03-15 18:01:54', 'delphine', NULL, '9e0728272c2ab54e82c7624aaf63269dd72f1446', '1429208a66451a9a18048da9a2c81def496da659', 'cornell@kuphallittle.com')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'deshawn_heaney') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'kaley@keebler.info') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:54', '2012-03-15 18:01:54', 'deshawn_heaney', NULL, 'a209fe7d46e48fead7258ff03def057117580156', '91e1e916637266777e53e3362b595986886b3604', 'kaley@keebler.info')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'myles') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'mara@oreilly.name') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:54', '2012-03-15 18:01:54', 'myles', NULL, 'f8d063eb43077af743bf2a9bb14c679167d79a0a', '678116b03336cc711a9e53e4fedb7a8955970bb9', 'mara@oreilly.name')[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mHoliday Last ID (0.1ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (53.5ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (1, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (2, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (3, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (4, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (5, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (6, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 1, NULL)[0m
+  [4;35;1mHoliday Last ID (0.1ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (71.9ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (7, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (8, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (9, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (10, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (11, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (12, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (13, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (14, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (15, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (16, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 2, NULL)[0m
+  [4;35;1mHoliday Last ID (0.3ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (66.5ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (17, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (18, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (19, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (20, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (21, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (22, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (23, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 3, NULL)[0m
+  [4;35;1mHoliday Last ID (0.3ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (54.9ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (24, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (25, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (26, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (27, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (28, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 4, NULL)[0m
+  [4;35;1mHoliday Last ID (0.3ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (53.9ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (29, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (30, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (31, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (32, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (33, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (34, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (35, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 5, NULL)[0m
+  [4;35;1mHoliday Last ID (0.4ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (53.7ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (36, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (37, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (38, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (39, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (40, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (41, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (42, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 6, NULL)[0m
+  [4;35;1mHoliday Last ID (0.5ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (53.7ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (43, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (44, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (45, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (46, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (47, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (48, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (49, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 7, NULL)[0m
+  [4;35;1mHoliday Last ID (0.5ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (82.2ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (50, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (51, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (52, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (53, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (54, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (55, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (56, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (57, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (58, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (59, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 8, NULL)[0m
+  [4;35;1mHoliday Last ID (1.0ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (56.1ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (60, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (61, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (62, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (63, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (64, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 9, NULL)[0m
+  [4;35;1mHoliday Last ID (0.6ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (54.5ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (65, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (66, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (67, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (68, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (69, '2012-03-15', '3', '2012-03-16', '2012-03-15 18:01:54', '2012-03-15 18:01:54', 10, NULL)[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmu.ac.uk') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 18:01:55', '2012-03-15 18:01:55', 'admin', NULL, '1f92f59019dbd204346e1dfacb886f02e4e10d87', '22851a2ed535288e28d468751040d80721138288', 'admin@ljmu.ac.uk')[0m
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+Processing HolidaysController#index to xml (for 127.0.0.1 at 2012-03-15 18:39:50) [GET]
+  Parameters: {"format"=>"xml", "action"=>"index", "controller"=>"holidays"}
+
+NoMethodError (undefined method `admin' for nil:NilClass):
+  app/controllers/holidays_controller.rb:12:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (58.4ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index to html (for 127.0.0.1 at 2012-03-15 18:42:06) [GET]
+  Parameters: {"format"=>"html", "action"=>"index", "controller"=>"holidays"}
+
+NoMethodError (undefined method `admin' for nil:NilClass):
+  app/controllers/holidays_controller.rb:12:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-03-15 18:53:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+Rendering template within layouts/application
+Rendering holidays/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered holidays/_form (124.4ms)
+
+ActionView::TemplateError (undefined local variable or method `formatted_recipes_path' for #<ActionView::Base:0xb6131634>) on line #10 of app/views/layouts/application.html.erb:
+7:     <%= stylesheet_link_tag 'calendar/grey/style' %>
+8:     <%= yield(:head) %>
+9:     
+10:     <%= auto_discovery_link_tag :atom, formatted_recipes_path
+11: (:atom) %>
+12: 
+13:   </head>
+
+    app/views/layouts/application.html.erb:10
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 18:53:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `formatted_recipes_path' for #<ActionView::Base:0xb614740c>) on line #10 of app/views/layouts/application.html.erb:
+7:     <%= stylesheet_link_tag 'calendar/grey/style' %>
+8:     <%= yield(:head) %>
+9:     
+10:     <%= auto_discovery_link_tag :atom, formatted_recipes_path
+11: (:atom) %>
+12: 
+13:   </head>
+
+    app/views/layouts/application.html.erb:10
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (89.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 18:53:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `formatted_recipes_path' for #<ActionView::Base:0xb6258260>) on line #10 of app/views/layouts/application.html.erb:
+7:     <%= stylesheet_link_tag 'calendar/grey/style' %>
+8:     <%= yield(:head) %>
+9:     
+10:     <%= auto_discovery_link_tag :atom, formatted_recipes_path
+11: (:atom) %>
+12: 
+13:   </head>
+
+    app/views/layouts/application.html.erb:10
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (39.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 18:53:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `formatted_recipes_path' for #<ActionView::Base:0xb611f240>) on line #10 of app/views/layouts/application.html.erb:
+7:     <%= stylesheet_link_tag 'calendar/grey/style' %>
+8:     <%= yield(:head) %>
+9:     
+10:     <%= auto_discovery_link_tag :atom, formatted_recipes_path
+11: (:atom) %>
+12: 
+13:   </head>
+
+    app/views/layouts/application.html.erb:10
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (86.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 18:53:30) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `formatted_recipes_path' for #<ActionView::Base:0xb62445e4>) on line #10 of app/views/layouts/application.html.erb:
+7:     <%= stylesheet_link_tag 'calendar/grey/style' %>
+8:     <%= yield(:head) %>
+9:     
+10:     <%= auto_discovery_link_tag :atom, formatted_recipes_path
+11: (:atom) %>
+12: 
+13:   </head>
+
+    app/views/layouts/application.html.erb:10
+    app/controllers/sessions_controller.rb:13:in `create'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 18:54:10) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `formatted_recipes_path' for #<ActionView::Base:0xb60fb0fc>) on line #10 of app/views/layouts/application.html.erb:
+7:     <%= stylesheet_link_tag 'calendar/grey/style' %>
+8:     <%= yield(:head) %>
+9:     
+10:     <%= auto_discovery_link_tag :atom, formatted_recipes_path (:atom) %>
+11: 
+12:   </head>
+13:   <body>
+
+    app/views/layouts/application.html.erb:10
+    app/controllers/sessions_controller.rb:13:in `create'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 18:54:53) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (3.0ms)
+Completed in 24ms (View: 16, DB: 1) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 18:54:59) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'Admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (2.1ms)
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 18:55:04) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (2.1ms)
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 18:55:12) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 18:55:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.3ms)
+Completed in 19ms (View: 7, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-03-15 18:55:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+Rendering template within layouts/application
+Rendering holidays/new
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (62.3ms)
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.3ms)
+Completed in 70ms (View: 65, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 18:55:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"atom", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 0) [0m
+
+ActiveRecord::RecordNotFound (Couldn't find Holiday with ID=atom):
+  app/controllers/holidays_controller.rb:21:in `show'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 18:55:38) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.first) on line #3 of app/views/holidays/index.atom.builder:
+1: atom_feed do |feed|
+2:   feed.title("Holiday Request Atom Feed")
+3:   feed.updated(@holiday.first.created_at)
+4:   @holiday.each do |holiday|
+5:     feed.entry(holiday) do |entry|
+6:       entry.title(holiday.user.username)
+
+    app/views/holidays/index.atom.builder:3:in `_run_builder_app47views47holidays47index46atom46builder'
+    app/views/holidays/index.atom.builder:1:in `_run_builder_app47views47holidays47index46atom46builder'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (41.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-03-15 18:55:49) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"1", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Create (0.4ms)[0m   [0;1mINSERT INTO "holidays" ("number_of_days", "created_at", "date_to", "updated_at", "date_from", "approved", "user_id") VALUES(1.0, '2012-03-15 18:55:49', '2012-03-15', '2012-03-15 18:55:49', '2012-03-15', NULL, 11)[0m
+Redirected to http://localhost:3000/holidays/70
+Completed in 221ms (DB: 1) | 302 Found [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 18:55:49) [GET]
+  Parameters: {"action"=>"show", "id"=>"70", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 70) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/holidays/70]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 18:55:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 50ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 18:55:54) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.first) on line #3 of app/views/holidays/index.atom.builder:
+1: atom_feed do |feed|
+2:   feed.title("Holiday Request Atom Feed")
+3:   feed.updated(@holiday.first.created_at)
+4:   @holiday.each do |holiday|
+5:     feed.entry(holiday) do |entry|
+6:       entry.title(holiday.user.username)
+
+    app/views/holidays/index.atom.builder:3:in `_run_builder_app47views47holidays47index46atom46builder'
+    app/views/holidays/index.atom.builder:1:in `_run_builder_app47views47holidays47index46atom46builder'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (29.2ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 18:57:16) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/holidays/index.atom.builder:
+1: atom_feed do |feed|
+2:   feed.title("Holiday Request Atom Feed")
+3: 
+4:   @holiday.each do |holiday|
+5:     feed.entry(holiday) do |entry|
+6:       entry.title(holiday.user.username)
+7:       entry.content(holiday.number_of_days)
+
+    app/views/holidays/index.atom.builder:4:in `_run_builder_app47views47holidays47index46atom46builder'
+    app/views/holidays/index.atom.builder:1:in `_run_builder_app47views47holidays47index46atom46builder'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (96.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 18:57:18) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+
+ActionView::TemplateError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each) on line #4 of app/views/holidays/index.atom.builder:
+1: atom_feed do |feed|
+2:   feed.title("Holiday Request Atom Feed")
+3: 
+4:   @holiday.each do |holiday|
+5:     feed.entry(holiday) do |entry|
+6:       entry.title(holiday.user.username)
+7:       entry.content(holiday.number_of_days)
+
+    app/views/holidays/index.atom.builder:4:in `_run_builder_app47views47holidays47index46atom46builder'
+    app/views/holidays/index.atom.builder:1:in `_run_builder_app47views47holidays47index46atom46builder'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (43.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 18:57:42) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:01:18) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:01:19) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.5ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:01:19) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 16ms (View: 5, DB: 0) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:01:42) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 19:01:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"70", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 70) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/holidays/70]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:02:57) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+
+NoMethodError (undefined method `admin' for nil:NilClass):
+  app/controllers/holidays_controller.rb:12:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:03:04) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+
+NoMethodError (undefined method `admin' for nil:NilClass):
+  app/controllers/holidays_controller.rb:12:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:05:32) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:07:20) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 48ms (View: 40, DB: 0) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:07:24) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.6ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 47ms (View: 11, DB: 1) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 19:07:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"70", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 70) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.6ms)
+Completed in 31ms (View: 21, DB: 1) | 200 OK [http://localhost/holidays/70]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 19:07:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.3ms)
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 19:08:15) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:08:19) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"elliot", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'elliot') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'elliot') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:08:27) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:08:33) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:08:41) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:08:48) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:08:53) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:09:04) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 57ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:09:08) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:09:16) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 11ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:09:20) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'Admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 10ms (View: 4, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 19:09:44) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"8h5tD+SRDo4ncoT+XXwVUlKEHiRNPoAY1dFMziii0MU=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 8ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 19:09:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.3ms)
+Completed in 18ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 19:13:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.4ms)
+Completed in 24ms (View: 12, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 19:13:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.3ms)
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 19:13:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.3ms)
+Completed in 19ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 19:14:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.3ms)
+Completed in 23ms (View: 12, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-03-15 19:14:44) [GET]
+
+ActionController::RoutingError (No route matches "/recipes.atom" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 19:14:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.3ms)
+Completed in 30ms (View: 13, DB: 1) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:15:02) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 19:15:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.3ms)
+Completed in 18ms (View: 8, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 19:18:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:18:36) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+
+NoMethodError (undefined method `admin' for nil:NilClass):
+  app/controllers/holidays_controller.rb:12:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:18:36) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+
+NoMethodError (undefined method `admin' for nil:NilClass):
+  app/controllers/holidays_controller.rb:12:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (31.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 19:23:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+DEPRECATION WARNING: formatted_holidays_path() has been deprecated. Please pass format to the standard holidays_path method instead. (called from _run_erb_app47views47layouts47application46html46erb at /home/elliot/code/LJMUHolidays/app/views/layouts/application.html.erb:10)
+Rendered users/_login (0.2ms)
+Completed in 56ms (View: 54, DB: 0) | 200 OK [http://localhost/login]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:27:37) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+
+NoMethodError (undefined method `admin' for nil:NilClass):
+  app/controllers/holidays_controller.rb:12:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (32.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:28:34) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 11) [0m
+Rendering holidays/index
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Completed in 17ms (View: 6, DB: 0) | 200 OK [http://localhost/holidays.atom]
+
+
+Processing HolidaysController#index to atom (for 127.0.0.1 at 2012-03-15 19:28:51) [GET]
+  Parameters: {"format"=>"atom", "action"=>"index", "controller"=>"holidays"}
+
+NoMethodError (undefined method `admin' for nil:NilClass):
+  app/controllers/holidays_controller.rb:12:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (66.6ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)

@@ -6,6 +6,9 @@
     <%= stylesheet_link_tag 'application' %>
     <%= stylesheet_link_tag 'calendar/grey/style' %>
     <%= yield(:head) %>
+    
+    <%= auto_discovery_link_tag :atom, formatted_holidays_path (:atom) %>
+
   </head>
   <body>
       <img class="ljmulogo" src="/images/ljmulogowhite.jpg" />
