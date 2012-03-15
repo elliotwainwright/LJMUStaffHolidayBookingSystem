@@ -14,7 +14,7 @@
     <%= f.date_select :date_to %>
   </p>
   <p>
-    <% if current_user.id == 14 %>
+    <% if current_user.admin == true %>
     <%= f.label :approved %><br />
     <%= f.check_box(:approved) %>
     <% else %>

@@ -156,11 +156,10 @@ td.emphasis {
 }
 
 #flash_notice, #flash_error {
-  position: relative;
-  left: 480px;
+  position: absolute;
   top: 30px;
-  padding: 4px;
-  margin: 0;
+  padding: 0px;
+  margin-left: 80px;
   font-family: Helvetica, Arial;
   font-size: 24px;
 

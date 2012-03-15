@@ -1,20 +1,21 @@
 <% form_for @holiday do |f| %>
   <%= f.error_messages %>
-  <p>
-    <%= f.label :date_from %><br />
-    <%= f.date_select :date_from %>
-  </p>
-  <p>
+    <p>
     <%= f.label :number_of_days %><br />
     <%= f.text_field :number_of_days %>
   </p>
   <p>
+    <%= f.label :date_from %><br />
+    <%= f.date_select :date_from %>
+  </p>
+
+  <p>
     <%= f.label :date_to %><br />
     <%= f.date_select :date_to %>
   </p>
-    <p>
+  <p>
     <% if current_user.id == 14 %>
-    <%= f.label :approved? %><br />
+    <%= f.label :approved %><br />
     <%= f.check_box(:approved) %>
     <% else %>
     <%= f.label :approved %><br />
