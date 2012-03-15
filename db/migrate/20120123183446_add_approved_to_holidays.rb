@@ -1,6 +1,6 @@
 class AddApprovedToHolidays < ActiveRecord::Migration
   def self.up
-    add_column :holidays, :approved, :boolean, :default => false, :null => false
+    add_column :holidays, :approved, :boolean
   end
 
   def self.down

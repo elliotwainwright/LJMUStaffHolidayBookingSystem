@@ -1,6 +1,6 @@
 class HolidaysController < ApplicationController
   def index
-    if current_user.id == 14
+    if current_user.admin == true
       @holidays = Holiday.all
     else
       @holidays = Holiday.find_all_by_user_id(current_user.id)

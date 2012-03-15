@@ -35,16 +35,6 @@ img.ljmutrophy {
    border: inset 1px #666;
 }
 
-#login {
-position:absolute;
-float:left;
-}
-
-#holidaypic {
-  position: relative;
-  float:left;
-}
-
 a img {
   border: none;
 }
@@ -166,7 +156,7 @@ td.emphasis {
 }
 
 #flash_notice, #flash_error {
-  position: fixed;
+  position: relative;
   left: 480px;
   top: 30px;
   padding: 4px;

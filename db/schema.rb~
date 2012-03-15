@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20120315140038) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
-    t.boolean  "approved"
+    t.boolean  "approved", :default => false, :null => false
   end
 
   create_table "users", :force => true do |t|

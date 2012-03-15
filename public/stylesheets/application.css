@@ -156,8 +156,8 @@ td.emphasis {
 }
 
 #flash_notice, #flash_error {
-  position: fixed;
-  left: 480px;
+  position: relative;
+
   top: 30px;
   padding: 4px;
   margin: 0;
