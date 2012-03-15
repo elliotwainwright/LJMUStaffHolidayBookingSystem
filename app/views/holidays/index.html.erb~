@@ -1,6 +1,5 @@
 <% title "LJMU Staff Holiday Booking System" %>
 <p><%= link_to "New Holiday", new_holiday_path %></p>
-<br>
 <hr>
 <br>
 <table id="hols">
