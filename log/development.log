@@ -27601,3 +27601,404 @@ Rendering holidays/show
   [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
 Rendered users/_login (0.2ms)
 Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/holidays/1]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-03-15 16:34:47) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 3ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 16:34:47) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (0.7ms)
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 16:35:29) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 16ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 16:35:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (1.9ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+Rendered users/_login (0.2ms)
+Completed in 203ms (View: 190, DB: 4) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#edit (for 127.0.0.1 at 2012-03-15 16:35:57) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/edit
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (64.7ms)
+Rendered users/_login (0.3ms)
+Completed in 80ms (View: 74, DB: 0) | 200 OK [http://localhost/holidays/1/edit]
+
+
+Processing HolidaysController#update (for 127.0.0.1 at 2012-03-15 16:35:59) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"3.0", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "approved"=>"1", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "id"=>"1", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+  [4;35;1mHoliday Update (0.4ms)[0m   [0mUPDATE "holidays" SET "approved" = 't', "updated_at" = '2012-03-15 16:35:59' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/holidays/1
+Completed in 83ms (DB: 1) | 302 Found [http://localhost/holidays/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 16:35:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (0.2ms)
+Completed in 59ms (View: 12, DB: 0) | 200 OK [http://localhost/holidays/1]
+
+
+Processing HolidaysController#edit (for 127.0.0.1 at 2012-03-15 16:38:14) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/edit
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (65.1ms)
+Rendered users/_login (0.3ms)
+Completed in 74ms (View: 68, DB: 0) | 200 OK [http://localhost/holidays/1/edit]
+
+
+Processing HolidaysController#update (for 127.0.0.1 at 2012-03-15 16:38:17) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"3.0", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "approved"=>"0", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "id"=>"1", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+  [4;36;1mHoliday Update (0.2ms)[0m   [0;1mUPDATE "holidays" SET "approved" = 'f', "updated_at" = '2012-03-15 16:38:17' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/holidays/1
+Completed in 148ms (DB: 0) | 302 Found [http://localhost/holidays/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 16:38:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (0.3ms)
+Completed in 19ms (View: 13, DB: 1) | 200 OK [http://localhost/holidays/1]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 16:38:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (1.9ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+Rendered users/_login (0.2ms)
+Completed in 200ms (View: 153, DB: 3) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#edit (for 127.0.0.1 at 2012-03-15 16:38:33) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/edit
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (62.9ms)
+Rendered users/_login (0.3ms)
+Completed in 71ms (View: 65, DB: 0) | 200 OK [http://localhost/holidays/1/edit]
+
+
+Processing HolidaysController#update (for 127.0.0.1 at 2012-03-15 16:38:35) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"3.0", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "approved"=>"1", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "id"=>"1", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+  [4;36;1mHoliday Update (0.2ms)[0m   [0;1mUPDATE "holidays" SET "approved" = 't', "updated_at" = '2012-03-15 16:38:35' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/holidays/1
+Completed in 143ms (DB: 0) | 302 Found [http://localhost/holidays/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 16:38:35) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (0.2ms)
+Completed in 16ms (View: 11, DB: 1) | 200 OK [http://localhost/holidays/1]
+
+
+Processing HolidaysController#edit (for 127.0.0.1 at 2012-03-15 16:38:46) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/edit
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (65.4ms)
+Rendered users/_login (0.3ms)
+Completed in 74ms (View: 68, DB: 0) | 200 OK [http://localhost/holidays/1/edit]
+
+
+Processing HolidaysController#update (for 127.0.0.1 at 2012-03-15 16:38:48) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"3.0", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "approved"=>"0", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "id"=>"1", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+  [4;35;1mHoliday Update (0.2ms)[0m   [0mUPDATE "holidays" SET "approved" = 'f', "updated_at" = '2012-03-15 16:38:48' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/holidays/1
+Completed in 124ms (DB: 0) | 302 Found [http://localhost/holidays/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 16:38:48) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (0.3ms)
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/holidays/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 16:39:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (0.2ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/holidays/1]
+
+
+Processing HolidaysController#edit (for 127.0.0.1 at 2012-03-15 16:39:02) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/edit
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (65.4ms)
+Rendered users/_login (0.3ms)
+Completed in 74ms (View: 68, DB: 0) | 200 OK [http://localhost/holidays/1/edit]
+
+
+Processing HolidaysController#update (for 127.0.0.1 at 2012-03-15 16:39:04) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"3.0", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "approved"=>"1", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "id"=>"1", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+  [4;35;1mHoliday Update (0.1ms)[0m   [0mUPDATE "holidays" SET "approved" = 't', "updated_at" = '2012-03-15 16:39:04' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/holidays/1
+Completed in 133ms (DB: 0) | 302 Found [http://localhost/holidays/1]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 16:39:04) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.1ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (0.2ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/holidays/1]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-03-15 16:39:11) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 16:39:11) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-03-15 16:39:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_login (0.2ms)
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-03-15 16:39:26) [POST]
+  Parameters: {"commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"admin", "password"=>"[FILTERED]", "email"=>"admin@ljmu.ac.uk"}}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmu.ac.uk') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 16:39:26', '2012-03-15 16:39:26', 'admin', NULL, '07a153503cf63af5d78523c72437e4824abab463', '2d2a381550434ff44cf16014c325d58ee2a4c4e3', 'admin@ljmu.ac.uk')[0m
+Redirected to http://localhost:3000/holidays
+Completed in 138ms (DB: 0) | 302 Found [http://localhost/users]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 16:39:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 12) [0m
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 12) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+Rendered users/_login (0.2ms)
+Completed in 9ms (View: 2, DB: 0) | 200 OK [http://localhost/holidays]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-03-15 16:39:33) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 16:39:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (0.1ms)
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2012-03-15 16:39:34) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_login (0.2ms)
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/signup]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2012-03-15 16:39:50) [POST]
+  Parameters: {"commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "username"=>"admin", "password"=>"[FILTERED]", "email"=>"admin@ljmu.ac.uk"}}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@ljmu.ac.uk') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_login (0.2ms)
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/users]
