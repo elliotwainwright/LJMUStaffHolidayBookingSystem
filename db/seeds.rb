@@ -1,6 +1,6 @@
 require 'faker'
 require 'populator'
-require 'sha1'
+
 
 User.destroy_all
 Holiday.destroy_all
@@ -19,6 +19,6 @@ User.all.each do |user|
   holiday.user_id =  user.id
   holiday.number_of_days = "3"
   holiday.date_from = Date.today
-  holiday.date_to = Date.today
+  holiday.date_to = Date.tomorrow
  end
 end

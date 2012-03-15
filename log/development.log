@@ -28002,3 +28002,751 @@ Rendering template within layouts/application
 Rendering users/new
 Rendered users/_login (0.2ms)
 Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/users]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 17:46:37) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (1.0ms)
+Completed in 22ms (View: 20, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 17:46:44) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"admin", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'admin') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (0.2ms)
+Completed in 19ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 17:46:52) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"Admin", "password"=>"[FILTERED]"}
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."username" = 'Admin') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 17:46:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (1.8ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+Rendered users/_login (0.2ms)
+Completed in 201ms (View: 188, DB: 3) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-03-15 17:46:55) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+Rendering template within layouts/application
+Rendering holidays/new
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (68.3ms)
+Rendered users/_login (0.2ms)
+Completed in 83ms (View: 77, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-03-15 17:47:00) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"1", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "approved"=>"1", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Create (0.4ms)[0m   [0mINSERT INTO "holidays" ("number_of_days", "created_at", "date_to", "updated_at", "date_from", "approved", "user_id") VALUES(1.0, '2012-03-15 17:47:00', '2012-03-15', '2012-03-15 17:47:00', '2012-03-15', 't', 11)[0m
+Redirected to http://localhost:3000/holidays/64
+Completed in 89ms (DB: 1) | 302 Found [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 17:47:00) [GET]
+  Parameters: {"action"=>"show", "id"=>"64", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 64) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered users/_login (0.3ms)
+Completed in 23ms (View: 17, DB: 0) | 200 OK [http://localhost/holidays/64]
+
+
+Processing HolidaysController#edit (for 127.0.0.1 at 2012-03-15 17:47:05) [GET]
+  Parameters: {"action"=>"edit", "id"=>"64", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 64) [0m
+Rendering template within layouts/application
+Rendering holidays/edit
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (44.4ms)
+Rendered users/_login (0.2ms)
+Completed in 53ms (View: 49, DB: 0) | 200 OK [http://localhost/holidays/64/edit]
+
+
+Processing HolidaysController#update (for 127.0.0.1 at 2012-03-15 17:47:11) [PUT]
+  Parameters: {"commit"=>"Save changes", "action"=>"update", "_method"=>"put", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"1.0", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "approved"=>"0", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "id"=>"64", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 64) [0m
+  [4;36;1mHoliday Update (0.2ms)[0m   [0;1mUPDATE "holidays" SET "approved" = 'f', "updated_at" = '2012-03-15 17:47:11' WHERE "id" = 64[0m
+Redirected to http://localhost:3000/holidays/64
+Completed in 95ms (DB: 0) | 302 Found [http://localhost/holidays/64]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 17:47:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"64", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 64) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered users/_login (0.2ms)
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/holidays/64]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 17:47:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (2.7ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered users/_login (0.3ms)
+Completed in 289ms (View: 271, DB: 5) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-03-15 17:47:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+Rendering template within layouts/application
+Rendering holidays/new
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (62.1ms)
+Rendered users/_login (0.3ms)
+Completed in 69ms (View: 64, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-03-15 17:47:22) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"2", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "approved"=>"0", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Create (0.2ms)[0m   [0;1mINSERT INTO "holidays" ("number_of_days", "created_at", "date_to", "updated_at", "date_from", "approved", "user_id") VALUES(2.0, '2012-03-15 17:47:22', '2012-03-15', '2012-03-15 17:47:22', '2012-03-15', 'f', 11)[0m
+Redirected to http://localhost:3000/holidays/65
+Completed in 96ms (DB: 0) | 302 Found [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 17:47:22) [GET]
+  Parameters: {"action"=>"show", "id"=>"65", "controller"=>"holidays"}
+  [4;35;1mHoliday Load (0.2ms)[0m   [0mSELECT * FROM "holidays" WHERE ("holidays"."id" = 65) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered users/_login (0.3ms)
+Completed in 48ms (View: 44, DB: 0) | 200 OK [http://localhost/holidays/65]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 17:47:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Load (2.9ms)[0m   [0mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered users/_login (0.3ms)
+Completed in 251ms (View: 232, DB: 5) | 200 OK [http://localhost/holidays]
+
+
+Processing HolidaysController#new (for 127.0.0.1 at 2012-03-15 17:47:33) [GET]
+  Parameters: {"action"=>"new", "controller"=>"holidays"}
+Rendering template within layouts/application
+Rendering holidays/new
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered holidays/_form (110.3ms)
+Rendered users/_login (0.3ms)
+Completed in 118ms (View: 113, DB: 0) | 200 OK [http://localhost/holidays/new]
+
+
+Processing HolidaysController#create (for 127.0.0.1 at 2012-03-15 17:47:37) [POST]
+  Parameters: {"commit"=>"Save changes", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "holiday"=>{"number_of_days"=>"3", "date_to(1i)"=>"2012", "date_to(2i)"=>"3", "date_to(3i)"=>"15", "approved"=>"0", "date_from(1i)"=>"2012", "date_from(2i)"=>"3", "date_from(3i)"=>"15"}, "controller"=>"holidays"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mHoliday Create (0.2ms)[0m   [0mINSERT INTO "holidays" ("number_of_days", "created_at", "date_to", "updated_at", "date_from", "approved", "user_id") VALUES(3.0, '2012-03-15 17:47:37', '2012-03-15', '2012-03-15 17:47:37', '2012-03-15', 'f', 11)[0m
+Redirected to http://localhost:3000/holidays/66
+Completed in 77ms (DB: 0) | 302 Found [http://localhost/holidays]
+
+
+Processing HolidaysController#show (for 127.0.0.1 at 2012-03-15 17:47:37) [GET]
+  Parameters: {"action"=>"show", "id"=>"66", "controller"=>"holidays"}
+  [4;36;1mHoliday Load (0.2ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."id" = 66) [0m
+Rendering template within layouts/application
+Rendering holidays/show
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered users/_login (0.3ms)
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/holidays/66]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 17:47:39) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mHoliday Load (1.9ms)[0m   [0;1mSELECT * FROM "holidays" [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 4) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 5) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 6) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 7) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 8) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 9) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 11) [0m
+Rendered users/_login (0.4ms)
+Completed in 207ms (View: 194, DB: 3) | 200 OK [http://localhost/holidays]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (104.7ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (67.1ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateHolidays (20120119200200)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "holidays" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "date_from" date, "number_of_days" float, "date_to" date, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120119200200')[0m
+Migrating to CreateUsers (20120119200904)
+  [4;35;1mSQL (0.3ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "username" varchar(255), "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120119200904')[0m
+Migrating to AddUserIdToHolidays (20120119204314)
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "holidays" ADD "user_id" integer[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120119204314')[0m
+Migrating to AddApprovedToHolidays (20120123183446)
+  [4;35;1mSQL (0.3ms)[0m   [0mALTER TABLE "holidays" ADD "approved" boolean[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120123183446')[0m
+Migrating to AddAdminToUser (20120315140038)
+  [4;35;1mSQL (0.2ms)[0m   [0mALTER TABLE "users" ADD "admin" boolean[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120315140038')[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("holidays")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mHoliday Load (0.1ms)[0m   [0mSELECT * FROM "holidays" [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'maryse') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'cooper_berge@waters.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.4ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:25', '2012-03-15 17:50:25', 'maryse', NULL, '09c31cea8f2fbdbffcb468c8eda1d4d3200afe39', 'e5135b301c6dcdd91590f326898493312f4fb60a', 'cooper_berge@waters.org')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'colton') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'bailee_streich@bartoletti.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:25', '2012-03-15 17:50:25', 'colton', NULL, '156d555adcc368fe592ddf05ed577e8ab281befd', '4bd683420b82128ea5daf7c4a0cb8850f444a6a7', 'bailee_streich@bartoletti.com')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'greta.herman') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'otilia@medhurstcronin.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:25', '2012-03-15 17:50:25', 'greta.herman', NULL, '9c3c40fac104b1d9a791f5f2f2a0c7b61dec31d9', 'abde97e99e3dfd3c5d7bab9618451b8466e404a9', 'otilia@medhurstcronin.org')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'osvaldo_kovacek') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tyrique@ohara.info') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:25', '2012-03-15 17:50:25', 'osvaldo_kovacek', NULL, '4f421ab15b307c30eca7de831b6c9df5b9a09842', '02f5af8a99f4e94f1b8e95a434288273ff1aa6cc', 'tyrique@ohara.info')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'nicholas_shanahan') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'sister.effertz@goodwinwhite.net') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:26', '2012-03-15 17:50:26', 'nicholas_shanahan', NULL, 'a0cd253eea8730d3714c37e141016b602190a025', 'ff173bd38f6c89a3be009bc8476ec32631e226fd', 'sister.effertz@goodwinwhite.net')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'dillon') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'summer_zboncak@mosciskizboncak.net') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:26', '2012-03-15 17:50:26', 'dillon', NULL, '4c37c2da753c31701041e3b2e974f26a27c3efdc', '7382fa3925488c6e5983f8b65d8a7faa07cae2a9', 'summer_zboncak@mosciskizboncak.net')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'boris') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'theresa@feil.info') LIMIT 1[0m
+  [4;36;1mUser Create (0.2ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:26', '2012-03-15 17:50:26', 'boris', NULL, 'a2375b3e077b44c5e3962a1a1b6a947fe44709e3', 'b0a7c96b8d01cec32d3799bbb0e3dc4afe32f4cb', 'theresa@feil.info')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'jed_heidenreich') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'therese.bergnaum@schaefer.info') LIMIT 1[0m
+  [4;35;1mUser Create (0.2ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:26', '2012-03-15 17:50:26', 'jed_heidenreich', NULL, '5cb805e992bc16c9ef9ea00b4d0d8b787b05ceb7', 'dd2ee06d070dc54f1f3b8271c9f8f01157e85f1f', 'therese.bergnaum@schaefer.info')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'taurean_price') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'cara@ohara.biz') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:26', '2012-03-15 17:50:26', 'taurean_price', NULL, 'f47fc0a79bc099f5fada6efcf25ad6f3109d8dc7', 'ec9c4d7bdd2be5c85c97e1e54cc0d691ed3e0b80', 'cara@ohara.biz')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'harley') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'travis_labadie@kilback.biz') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:50:26', '2012-03-15 17:50:26', 'harley', NULL, 'c15a97b88f1c717b9d8d9f8794d1c0058c887fca', '130882214861531bfe6179bd049839f7fdb99ba7', 'travis_labadie@kilback.biz')[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mHoliday Last ID (0.1ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (52.8ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (1, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (2, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (3, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (4, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (5, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (6, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 1, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (7, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 1, NULL)[0m
+  [4;35;1mHoliday Last ID (0.2ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (54.4ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (8, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (9, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (10, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (11, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (12, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 2, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (13, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 2, NULL)[0m
+  [4;35;1mHoliday Last ID (0.2ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (75.4ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (14, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (15, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (16, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (17, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (18, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 3, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (19, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 3, NULL)[0m
+  [4;35;1mHoliday Last ID (0.4ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (63.5ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (20, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (21, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (22, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (23, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (24, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (25, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (26, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (27, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 4, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (28, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 4, NULL)[0m
+  [4;35;1mHoliday Last ID (0.3ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (53.3ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (29, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (30, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (31, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (32, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (33, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (34, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (35, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 5, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (36, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 5, NULL)[0m
+  [4;35;1mHoliday Last ID (0.4ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (53.2ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (37, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (38, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (39, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (40, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (41, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (42, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (43, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 6, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (44, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 6, NULL)[0m
+  [4;35;1mHoliday Last ID (0.5ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (53.7ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (45, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (46, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (47, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (48, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (49, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (50, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 7, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (51, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 7, NULL)[0m
+  [4;35;1mHoliday Last ID (0.5ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (77.3ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (52, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (53, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (54, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (55, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 8, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (56, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 8, NULL)[0m
+  [4;35;1mHoliday Last ID (0.8ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (52.2ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (57, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (58, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (59, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (60, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (61, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (62, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (63, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (64, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 9, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (65, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 9, NULL)[0m
+  [4;35;1mHoliday Last ID (0.6ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (69.0ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (66, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (67, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (68, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (69, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (70, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (71, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (72, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (73, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 10, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (74, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:50:26', '2012-03-15 17:50:26', 10, NULL)[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-03-15 17:51:17) [GET]
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Redirected to http://localhost:3000/
+Completed in 2ms (DB: 0) | 302 Found [http://localhost/logout]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-03-15 17:51:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (0.9ms)
+Completed in 21ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 17:51:26) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"marse", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'marse') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'marse') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (0.2ms)
+Completed in 18ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 17:51:32) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"marsey", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'marsey') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'marsey') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (0.2ms)
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 17:51:36) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"marsey", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'marsey') LIMIT 1[0m
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'marsey') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (0.2ms)
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 17:51:40) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"marsy", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'marsy') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'marsy') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered users/_login (0.1ms)
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/sessions]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-03-15 17:52:01) [POST]
+  Parameters: {"commit"=>"Log in", "action"=>"create", "authenticity_token"=>"4qnCwceBYF+tHIE2dU/NP8s+d8KhszLJhEQM7yizbbA=", "controller"=>"sessions", "login"=>"maryse", "password"=>"[FILTERED]"}
+  [4;36;1mUser Load (0.2ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."username" = 'maryse') LIMIT 1[0m
+Redirected to http://localhost:3000/holidays
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/sessions]
+
+
+Processing HolidaysController#index (for 127.0.0.1 at 2012-03-15 17:52:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"holidays"}
+  [4;35;1mUser Load (0.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mHoliday Load (0.3ms)[0m   [0;1mSELECT * FROM "holidays" WHERE ("holidays"."user_id" = 1) [0m
+Rendering template within layouts/application
+Rendering holidays/index
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) [0m
+Rendered users/_login (0.2ms)
+Completed in 36ms (View: 25, DB: 1) | 200 OK [http://localhost/holidays]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mUser Destroy (0.3ms)[0m   [0mDELETE FROM "users" WHERE "id" = 1[0m
+  [4;36;1mUser Destroy (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 2[0m
+  [4;35;1mUser Destroy (0.1ms)[0m   [0mDELETE FROM "users" WHERE "id" = 3[0m
+  [4;36;1mUser Destroy (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 4[0m
+  [4;35;1mUser Destroy (0.1ms)[0m   [0mDELETE FROM "users" WHERE "id" = 5[0m
+  [4;36;1mUser Destroy (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 6[0m
+  [4;35;1mUser Destroy (0.1ms)[0m   [0mDELETE FROM "users" WHERE "id" = 7[0m
+  [4;36;1mUser Destroy (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 8[0m
+  [4;35;1mUser Destroy (0.1ms)[0m   [0mDELETE FROM "users" WHERE "id" = 9[0m
+  [4;36;1mUser Destroy (0.1ms)[0m   [0;1mDELETE FROM "users" WHERE "id" = 10[0m
+  [4;35;1mHoliday Load (2.2ms)[0m   [0mSELECT * FROM "holidays" [0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 1[0m
+  [4;35;1mHoliday Destroy (0.2ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 2[0m
+  [4;36;1mHoliday Destroy (0.2ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 3[0m
+  [4;35;1mHoliday Destroy (0.2ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 4[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 5[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 6[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 7[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 8[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 9[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 10[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 11[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 12[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 13[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 14[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 15[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 16[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 17[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 18[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 19[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 20[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 21[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 22[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 23[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 24[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 25[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 26[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 27[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 28[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 29[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 30[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 31[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 32[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 33[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 34[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 35[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 36[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 37[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 38[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 39[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 40[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 41[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 42[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 43[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 44[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 45[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 46[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 47[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 48[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 49[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 50[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 51[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 52[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 53[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 54[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 55[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 56[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 57[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 58[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 59[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 60[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 61[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 62[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 63[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 64[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 65[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 66[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 67[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 68[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 69[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 70[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 71[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 72[0m
+  [4;36;1mHoliday Destroy (0.1ms)[0m   [0;1mDELETE FROM "holidays" WHERE "id" = 73[0m
+  [4;35;1mHoliday Destroy (0.1ms)[0m   [0mDELETE FROM "holidays" WHERE "id" = 74[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'jana_schoen') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'allene@kuphal.org') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'jana_schoen', NULL, 'ab150425d4e7475ccdce2c9ac15d1b8f6f3a88bc', '1dbdc87c79559545189b144c2807f63e6fa5cf76', 'allene@kuphal.org')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'orin_rempel') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'lionel@goyettepfeffer.info') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'orin_rempel', NULL, '4360a78086ca0aa3d010be279b35d008bca396d6', 'b7fa3faf55a7031332e9faee34bc84869e8ae22b', 'lionel@goyettepfeffer.info')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'eldridge.nienow') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'autumn@mills.name') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'eldridge.nienow', NULL, 'f38503dc976032fff876a0e9180828356b4958f5', '3019564c5a24768c73acd44f0bda2b75e871fe3c', 'autumn@mills.name')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'ella_kassulke') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'tatum@pfeffer.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'ella_kassulke', NULL, '8382cbcdce34279fe4771c6a7945ef2d25545711', '173a5391549e14676ae305734a49e3f53956cc66', 'tatum@pfeffer.com')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'rodrick.larson') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'ana.monahan@mayer.net') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'rodrick.larson', NULL, '9e8f1c2dbf6d323b32925cd968c4800115aeb141', '2cd37b1c4dea21e3c599bf519e7eadd38f6701c2', 'ana.monahan@mayer.net')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'deangelo') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'nakia@maggio.biz') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'deangelo', NULL, 'a62ddf8986f51e47510f7863a77944120143cffa', '983a11976986c6b2ac4fd16e14d665d979ea0d08', 'nakia@maggio.biz')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'francisco') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'ashton@dickinsonthompson.net') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'francisco', NULL, '3b9038713817befe377a265febcba8d070c3fe75', '2d32f81f6788341219bb39d3a2269880c6c52889', 'ashton@dickinsonthompson.net')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'angelina.ortiz') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'fletcher.terry@franecki.com') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'angelina.ortiz', NULL, 'bd56ec6522d8011a55ca6bcbd6aaed6d4536fd4f', 'a9f9f3ff03e6b15e63d51a6b18500f2edbb1257d', 'fletcher.terry@franecki.com')[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."username" = 'columbus.price') LIMIT 1[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'estel.lebsack@aufderhar.net') LIMIT 1[0m
+  [4;36;1mUser Create (0.1ms)[0m   [0;1mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'columbus.price', NULL, '09debf65ccf0747329e67b0bea03c3872782cf0d', 'a6a9fef9534f8c2cfc10aa972ec8e90c52447e85', 'estel.lebsack@aufderhar.net')[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."username" = 'zoey') LIMIT 1[0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'priscilla.osinski@hammes.name') LIMIT 1[0m
+  [4;35;1mUser Create (0.1ms)[0m   [0mINSERT INTO "users" ("created_at", "updated_at", "username", "admin", "password_salt", "password_hash", "email") VALUES('2012-03-15 17:53:10', '2012-03-15 17:53:10', 'zoey', NULL, 'e1db09eca75f92b1a2c78fb1a1036eaec8ec53f8', '9fd6a1a0fed1428157b30b71871d76af4e4fe59d', 'priscilla.osinski@hammes.name')[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" [0m
+  [4;35;1mHoliday Last ID (0.1ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (51.1ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (1, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:10', '2012-03-15 17:53:10', 11, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (2, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:10', '2012-03-15 17:53:10', 11, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (3, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:10', '2012-03-15 17:53:10', 11, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (4, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:10', '2012-03-15 17:53:10', 11, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (5, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:10', '2012-03-15 17:53:10', 11, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (6, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:10', '2012-03-15 17:53:10', 11, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (7, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 11, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (8, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 11, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (9, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 11, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (10, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 11, NULL)[0m
+  [4;35;1mHoliday Last ID (0.2ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (55.5ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (11, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 12, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (12, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 12, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (13, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 12, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (14, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 12, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (15, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 12, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (16, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 12, NULL)[0m
+  [4;35;1mHoliday Last ID (0.2ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (61.3ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (17, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 13, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (18, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 13, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (19, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 13, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (20, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 13, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (21, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 13, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (22, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 13, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (23, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 13, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (24, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 13, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (25, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 13, NULL)[0m
+  [4;35;1mHoliday Last ID (0.3ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (61.7ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (26, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 14, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (27, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 14, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (28, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 14, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (29, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 14, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (30, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 14, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (31, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 14, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (32, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 14, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (33, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 14, NULL)[0m
+  [4;35;1mHoliday Last ID (0.4ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (53.3ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (34, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 15, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (35, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 15, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (36, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 15, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (37, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 15, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (38, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 15, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (39, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 15, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (40, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 15, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (41, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 15, NULL)[0m
+  [4;35;1mHoliday Last ID (0.4ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (54.4ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (42, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 16, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (43, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 16, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (44, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 16, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (45, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 16, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (46, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 16, NULL)[0m
+  [4;35;1mHoliday Last ID (0.5ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (46.4ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (47, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 17, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (48, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 17, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (49, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 17, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (50, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 17, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (51, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 17, NULL)[0m
+  [4;35;1mHoliday Last ID (0.5ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (53.0ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (52, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 18, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (53, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 18, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (54, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 18, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (55, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 18, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (56, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 18, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (57, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 18, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (58, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 18, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (59, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 18, NULL)[0m
+  [4;35;1mHoliday Last ID (0.6ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (52.4ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (60, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 19, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (61, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 19, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (62, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 19, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (63, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 19, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (64, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 19, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (65, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 19, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (66, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 19, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (67, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 19, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (68, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 19, NULL)[0m
+  [4;35;1mHoliday Last ID (0.7ms)[0m   [0mSELECT id FROM "holidays" ORDER BY id DESC[0m
+  [4;36;1mHoliday Populate (101.2ms)[0m   [0;1mINSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (69, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (70, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (71, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (72, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (73, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (74, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (75, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (76, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL);INSERT INTO "holidays" ("id", "date_from", "number_of_days", "date_to", "created_at", "updated_at", "user_id", "approved") VALUES (77, '2012-03-15', '3', '2012-03-16', '2012-03-15 17:53:11', '2012-03-15 17:53:11', 20, NULL)[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" [0m
