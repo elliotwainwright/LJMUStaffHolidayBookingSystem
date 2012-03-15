@@ -1,4 +1,6 @@
 <% title "LJMU Staff Holiday Booking System" %>
+
+<p><a href="#" onClick="win1()">win</a>
 <p><%= link_to "New Holiday", new_holiday_path %></p>
 <hr>
 <br>
@@ -17,6 +19,10 @@
       <td><%=h holiday.date_from %></td>
       <td><%=h holiday.date_to %></td>
       <td><%=h holiday.approved %></td>
+      
+      Dialog.alert({url: "info_panel.html", options: {method: 'get'}}, 
+            {className: "alphacube", width:540, okLabel: "Close"});
+            
       <td><%= link_to "Show", holiday %></td>
       <td><%= link_to "Edit", edit_holiday_path(holiday) %></td>
       <td><%= link_to "Destroy", holiday, :confirm => 'Are you sure?', :method => :delete %></td>

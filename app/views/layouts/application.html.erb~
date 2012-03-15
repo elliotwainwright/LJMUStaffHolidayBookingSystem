@@ -9,10 +9,8 @@
     
     <%= auto_discovery_link_tag :atom, formatted_holidays_path (:atom) %>
 
-
   </head>
   <body>
-  <link href="/holidays.atom" rel="alternate" title="ATOM" type="application/atom+xml" />
       <img class="ljmulogo" src="/images/ljmulogowhite.jpg" />
       <img class="ljmucloud" src="/images/ljmucloud.png" />
       <img class="ljmucompass" src="/images/ljmucompass.png" />
