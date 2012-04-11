@@ -2,9 +2,11 @@ class HolidaysController < ApplicationController
   def index
     @holiday = Holiday.all
     respond_to do |format|
-    format.html # Send the page using HTML
-    format.xml { render :xml => @holidays } # Send the page using XML
-    format.atom
+      format.html # Send the page using HTML
+      format.xml { render :xml => @holidays } # Send the page using XML
+      format.atom
+      format.js { render :partial => @holidays }
+      @holidays = Holiday.paginate :page => params[:page], :per_page => '15', :order => 'created_at DESC'
     end
   end
   
@@ -14,9 +16,8 @@ class HolidaysController < ApplicationController
     else
       @holidays = Holiday.find_all_by_user_id(current_user.id)
     end
-   
   end
-
+  
   def show
     @holiday = Holiday.find(params[:id])
   end

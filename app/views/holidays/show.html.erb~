@@ -1,10 +1,14 @@
 <% title "Holiday Booking Details" %>
-<% if current_user.id == @holiday.user_id or current_user.ad == 41 %>
+<% if current_user.id == @holiday.user_id or current_user.admin == true %>
 
 <table>
 <tr>
 <td class="emphasis">User:</td>
 <td><%=h @holiday.user.username %></td>
+</tr>
+<tr>
+<td class="emphasis">Number of Days:</td>
+<td><%=h @holiday.number_of_days %></td>
 </tr>
 <tr>
 <td class="emphasis">Date From:</td>
@@ -21,6 +25,14 @@
 </tr>
 </table>
 
+	<p>Your Holiday Photo:</p>
+		<% if @holiday.photo.file? %>
+		  <%= image_tag @holiday.photo.url(:small) %>
+		<% else %>
+		  <p>No Photo available!</p>
+		<% end %>
+		<h5><hr></h5>
+		
 <p>
   <%= link_to "Edit", edit_holiday_path(@holiday) %> |
   <%= link_to "Destroy", @holiday, :confirm => 'Are you sure?', :method => :delete %> |

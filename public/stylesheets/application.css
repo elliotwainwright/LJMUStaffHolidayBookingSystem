@@ -212,3 +212,10 @@ td.emphasis {
   font-size: 12px;
   list-style: disc;
 }
+
+#rss {
+position:fixed;
+z-index: 1000;
+right: 40px;
+bottom: 4px;
+}

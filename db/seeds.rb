@@ -27,4 +27,5 @@ user.username = "admin"
 user.email = "admin@ljmu.ac.uk"
 user.password = "admin"
 user.password_confirmation = "admin"
+user.admin = "true"
 user.save
